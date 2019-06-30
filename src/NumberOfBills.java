@@ -7,7 +7,7 @@ public class NumberOfBills implements Denominations {
         this.num = num;
     }
 
-    public void NumberOfBills() {
+    public void countBills() {
         if (num <= 0.00) {
             System.out.println("You don`t have money");
         } else
