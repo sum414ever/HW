@@ -14,11 +14,10 @@ public class BillCounter {
     }
 
     public void countBills(int den) {
-        while (num >= den) {
+        if (num >= den) {
             five = num / den;
             System.out.print(five + "*" + den + ", ");
             num = num - den * five;
-            break;
         }
     }
 }
