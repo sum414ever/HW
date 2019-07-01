@@ -1,7 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        RunTime rt = new RunTime();
+        LaunchCreator rt = new LaunchCreator();
         rt.createDiapasonRun(24565, 35789);
     }
 }

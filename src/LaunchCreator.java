@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class RunTime {
+public class LaunchCreator {
 
     public long timeStartApp = 0;
     public long runTime = 0;
@@ -12,9 +12,17 @@ public class RunTime {
 
     public void createOneRun(long num) {
         timeStartApp = System.currentTimeMillis();
-        NumberOfBills n = new NumberOfBills((int) num);
+        BillCounter n = new BillCounter((int) num);
         n.checkOnNull();
-        n.countBills();
+        n.countFiveHundredBills();
+        n.countTwoHundredBills();
+        n.countOneHundredBills();
+        n.countFiftyBills();
+        n.countTwentyBills();
+        n.countTenBills();
+        n.countFiveBills();
+        n.countTwoBills();
+        n.countOneBills();
         runTime = System.currentTimeMillis() - timeStartApp;
         System.out.println("\nThe app work " + runTime + " miliseconds\n");
     }
