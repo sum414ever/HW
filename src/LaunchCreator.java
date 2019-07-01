@@ -14,15 +14,15 @@ public class LaunchCreator {
         timeStartApp = System.currentTimeMillis();
         BillCounter n = new BillCounter((int) num);
         n.checkOnNull();
-        n.countFiveHundredBills();
-        n.countTwoHundredBills();
-        n.countOneHundredBills();
-        n.countFiftyBills();
-        n.countTwentyBills();
-        n.countTenBills();
-        n.countFiveBills();
-        n.countTwoBills();
-        n.countOneBills();
+        n.countBills(Denominations.FIVE_HUNDRED);
+        n.countBills(Denominations.TWO_HUNDRED);
+        n.countBills(Denominations.ONE_HUNDRED);
+        n.countBills(Denominations.FIFTY);
+        n.countBills(Denominations.TWENTY);
+        n.countBills(Denominations.TEN);
+        n.countBills(Denominations.FIVE);
+        n.countBills(Denominations.TWO);
+        n.countBills(Denominations.ONE);
         runTime = System.currentTimeMillis() - timeStartApp;
         System.out.println("\nThe app work " + runTime + " miliseconds\n");
     }
