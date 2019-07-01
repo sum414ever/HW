@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class LaunchCreator {
+public class LaunchCreator implements Denominations{
 
     public long timeStartApp = 0;
     public long runTime = 0;
@@ -14,15 +14,15 @@ public class LaunchCreator {
         timeStartApp = System.currentTimeMillis();
         BillCounter n = new BillCounter((int) num);
         n.checkOnNull();
-        n.countBills(Denominations.FIVE_HUNDRED);
-        n.countBills(Denominations.TWO_HUNDRED);
-        n.countBills(Denominations.ONE_HUNDRED);
-        n.countBills(Denominations.FIFTY);
-        n.countBills(Denominations.TWENTY);
-        n.countBills(Denominations.TEN);
-        n.countBills(Denominations.FIVE);
-        n.countBills(Denominations.TWO);
-        n.countBills(Denominations.ONE);
+        n.countBills(FIVE_HUNDRED);
+        n.countBills(TWO_HUNDRED);
+        n.countBills(ONE_HUNDRED);
+        n.countBills(FIFTY);
+        n.countBills(TWENTY);
+        n.countBills(TEN);
+        n.countBills(FIVE);
+        n.countBills(TWO);
+        n.countBills(ONE);
         runTime = System.currentTimeMillis() - timeStartApp;
         System.out.println("\nThe app work " + runTime + " miliseconds\n");
     }

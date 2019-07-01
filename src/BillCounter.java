@@ -1,4 +1,4 @@
-public class BillCounter implements Denominations {
+public class BillCounter {
     public int num;
     public int five = 0;
 
