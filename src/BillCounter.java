@@ -1,6 +1,5 @@
 public class BillCounter {
     public int num;
-    public int five = 0;
 
     public BillCounter(int num) {
         this.num = num;
@@ -13,11 +12,10 @@ public class BillCounter {
         System.out.print("\nAnd how many bills it is: ");
     }
 
-    public void countBills(int den) {
-        if (num >= den) {
-            five = num / den;
-            System.out.print(five + "*" + den + ", ");
-            num = num - den * five;
+    public void countBills(int denomination) {
+        if (num >= denomination) {
+            System.out.print(num / denomination + "*" + denomination + ", ");
+            num = num - denomination * (num / denomination);
         }
     }
 }

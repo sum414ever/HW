@@ -3,12 +3,11 @@ import java.util.List;
 
 public class LaunchCreator implements Denominations{
 
-    public long timeStartApp = 0;
-    public long runTime = 0;
-    public long minWorkTime = 0;
-    public long maxWorkTime = 0;
-    public int a = 0;
-    public int sum = 0;
+    public long timeStartApp;
+    public long runTime;
+    public long minWorkTime;
+    public long maxWorkTime;
+    public int sum;
 
     public void createOneRun(long num) {
         timeStartApp = System.currentTimeMillis();
@@ -30,8 +29,7 @@ public class LaunchCreator implements Denominations{
 
         List<Long> timerArray = new ArrayList<>();
         for (int i = 0; i < maxInDiapason - minInDiapason + 1; i++) {
-            a = minInDiapason + i;
-            createOneRun(a);
+            createOneRun(minInDiapason + i);
             timerArray.add(runTime);
             sum += runTime;
             if (minWorkTime > runTime) {
