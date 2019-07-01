@@ -1,19 +1,19 @@
 public class NumberOfBills implements Denominations {
-    public long num;
-    public long five = 0;
+    public int num;
+    public int five = 0;
 
-
-    public NumberOfBills(long num) {
+    public NumberOfBills(int num) {
         this.num = num;
     }
-
-    public void countBills() {
+    public void checkOnNull(){
         if (num <= 0.00) {
             System.out.println("You don`t have money");
         } else
             System.out.print("You have " + num + " grivens");
         System.out.print("\nAnd how many bills it is: ");
+    }
 
+    public void countBills() {
         while (num >= FIVE_HUNDRED) {
             five = num / FIVE_HUNDRED;
             System.out.print(five + "*" + FIVE_HUNDRED + ", ");
@@ -68,6 +68,5 @@ public class NumberOfBills implements Denominations {
             num = num - ONE * five;
             break;
         }
-
     }
 }
