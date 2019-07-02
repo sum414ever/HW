@@ -13,15 +13,7 @@ public class LaunchCreator implements Denominations{
         timeStartApp = System.currentTimeMillis();
         BillCounter n = new BillCounter((int) num);
         n.checkOnNull();
-        n.countBills(FIVE_HUNDRED);
-        n.countBills(TWO_HUNDRED);
-        n.countBills(ONE_HUNDRED);
-        n.countBills(FIFTY);
-        n.countBills(TWENTY);
-        n.countBills(TEN);
-        n.countBills(FIVE);
-        n.countBills(TWO);
-        n.countBills(ONE);
+        n.countBills();
         runTime = System.currentTimeMillis() - timeStartApp;
         System.out.println("\nThe app work " + runTime + " miliseconds\n");
     }
